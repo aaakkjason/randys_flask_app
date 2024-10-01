@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Service and Location Combinations</h2>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Service Name</th>
+                <th>Location Name</th>
+                <th>Municipality</th>
+                <th>County Name</th>
+                <th>Area Codes</th>
+                <th>View Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for combination in combinations %}
+            <tr>
+                <td>{{ combination.service_name }}</td>
+                <td>{{ combination.location_name }}</td>
+                <td>{{ combination.municipality }}</td>
+                <td>{{ combination.county_name }}</td>
+                <td>{{ combination.area_codes }}</td>
+                <td>
+<!-- Correct URL generation using slugs -->
+<a href="{{ url_for('show_combination_detail', county_slug=combination['county_slug'], location_slug=combination['location_slug'], service_slug=combination['service_slug']) }}">
+    {{ combination['service_name'] }} in {{ combination['location_name'] }}, {{ combination['county_name'] }}
+</a>
+
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
