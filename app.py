@@ -4,6 +4,7 @@ import re
 
 app = Flask(__name__)
 
+
 # Load the service and location datasets
 servicecats_df = pd.read_csv("servicecats.csv")
 locationcats_df = pd.read_csv("locationcats.csv")
@@ -58,6 +59,8 @@ def inject_services():
     return dict(parent_services=parent_services)
 
 
+#################            CACHING           #################################
+
 # Add caching headers
 @app.after_request
 def add_cache_control_headers(response):
@@ -70,35 +73,22 @@ def add_cache_control_headers(response):
     return response
 
 
+#################            ROUTES           #################################
+
 @app.route("/")
 def home():
     return render_template("main.html", content_template="content/home.html")
 
-@app.route("/about")
-def about():
-    return render_template("main.html", content_template="content/about.html")
+@app.route("/<page>")
+def render_page(page):
+    allowed_pages = ["about", "services", "service-area", "permits", "contact", "our-work", "estimate"]
+    if page in allowed_pages:
+        return render_template("main.html", content_template=f"content/{page}.html")
+    else:
+        abort(404)
 
-@app.route("/services")
-def services():
-    return render_template("main.html", content_template="content/services.html")
 
-@app.route("/service-area")
-def service_area():
-    return render_template("main.html", content_template="content/service-area.html")
-
-@app.route("/permits")
-def permits():
-    return render_template("main.html", content_template="content/permits.html")
-
-@app.route("/contact")
-def contact():
-    return render_template("main.html", content_template="content/contact.html")
-
-@app.route("/our-work")
-def our_work():
-    return render_template("main.html", content_template="content/our-work.html")
-
-# Show all combinations
+#################            COMBINATION LOGIC           #################################
 @app.route("/combinations")
 def show_combinations():
     return render_template("main.html", content_template="content/combinations.html", combinations=combinations)
@@ -115,7 +105,7 @@ def show_combination_detail(service_slug, location_slug, county_slug):
     # If no match found, return a 404 error page
     abort(404)
 
-# Contact form submission
+#################            FORM SUBMIT           #################################
 @app.route("/submit_contact", methods=["POST"])
 def submit_contact():
     # Retrieve form data
@@ -131,7 +121,7 @@ def submit_contact():
                            phone=phone, message=message)
 
 
-
+#################            SITEMAP           #################################
 # Create a sitemap route that displays all possible pages/routes
 @app.route("/sitemap.xml", methods=["GET"])
 def sitemap():
