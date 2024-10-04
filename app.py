@@ -1,9 +1,11 @@
-from flask import Flask, render_template, request, abort, url_for, Response
+from flask import Flask, render_template, request, abort, url_for, Response, send_from_directory
 import pandas as pd
 import re
 
 app = Flask(__name__)
 
+# Set the directory path for serving images
+IMAGE_DIRECTORY = 'D:\\merged2'
 
 # Load the service and location datasets
 servicecats_df = pd.read_csv("servicecats.csv")
@@ -87,6 +89,11 @@ def render_page(page):
     else:
         abort(404)
 
+# Route for serving images from the local directory
+@app.route('/images/<filename>')
+def serve_image(filename):
+    return send_from_directory(IMAGE_DIRECTORY, filename)
+
 
 #################            COMBINATION LOGIC           #################################
 @app.route("/combinations")
@@ -154,4 +161,3 @@ def sitemap():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
