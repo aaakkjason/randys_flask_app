@@ -5,7 +5,7 @@ import re
 app = Flask(__name__)
 
 # Set the directory path for serving images
-IMAGE_DIRECTORY = 'D:\\merged2'
+IMAGE_DIRECTORY = 'E:\\merged2'
 
 # Load the service and location datasets
 servicecats_df = pd.read_csv("servicecats.csv")
@@ -132,15 +132,15 @@ def submit_contact():
 # Create a sitemap route that displays all possible pages/routes
 @app.route("/sitemap.xml", methods=["GET"])
 def sitemap():
-    # List of static routes
+    # List of static routes using the generic 'render_page' route
     static_routes = [
         {"loc": url_for('home', _external=True)},
-        {"loc": url_for('about', _external=True)},
-        {"loc": url_for('services', _external=True)},
-        {"loc": url_for('service_area', _external=True)},
-        {"loc": url_for('permits', _external=True)},
-        {"loc": url_for('contact', _external=True)},
-        {"loc": url_for('our_work', _external=True)},
+        {"loc": url_for('render_page', page='about', _external=True)},
+        {"loc": url_for('render_page', page='services', _external=True)},
+        {"loc": url_for('render_page', page='service-area', _external=True)},
+        {"loc": url_for('render_page', page='permits', _external=True)},
+        {"loc": url_for('render_page', page='contact', _external=True)},
+        {"loc": url_for('render_page', page='our-work', _external=True)},
         {"loc": url_for('show_combinations', _external=True)}
     ]
 
@@ -148,10 +148,10 @@ def sitemap():
     dynamic_routes = []
     for combination in combinations:
         dynamic_routes.append({
-            "loc": url_for('show_combination_detail', 
-                           county_slug=combination['county_slug'], 
-                           location_slug=combination['location_slug'], 
-                           service_slug=combination['service_slug'], 
+            "loc": url_for('show_combination_detail',
+                           county_slug=combination['county_slug'],
+                           location_slug=combination['location_slug'],
+                           service_slug=combination['service_slug'],
                            _external=True)
         })
 
