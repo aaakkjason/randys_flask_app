@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="job-title">{{ job['Title'] }}</h1>
+    <p><strong>Category/Location:</strong> {{ job['Categories'] }}</p>
+    <p><strong>Date:</strong> {{ job['wpcf-job-date'] | datetimeformat('Y-m-d') }}</p>
+    <p><strong>Street Name:</strong> {{ job['wpcf-street-name'] }}</p>
+    <p><strong>Services:</strong> {{ job['wpcf-services'] }}</p>
+    <div class="job-description">
+        <strong>Description:</strong>
+        <p>{{ job['wpcf-description'] }}</p>
+    </div>
+
+    <!-- Display job photos if available -->
+    {% if job_photos %}
+        <div class="job-photos">
+            <h3>Job Photos</h3>
+            <div class="row">
+                {% for photo in job_photos %}
+                    {% if photo %}
+                        <div class="col-md-4">
+                            <img src="{{ photo }}" class="img-fluid job-photo" alt="Job Photo">
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    <p><strong>Permalink:</strong> <a href="{{ job['Permalink'] }}" target="_blank">{{ job['Permalink'] }}</a></p>
+</div>

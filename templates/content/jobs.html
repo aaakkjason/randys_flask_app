@@ -1,0 +1,26 @@
+<div class="pattern-square"></div>
+<!--Pageheader start-->
+<section class="py-5 py-lg-8">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6 offset-lg-1 col-md-12 col-12">
+            <h1 class="mb-3">Jobs</h1>
+            <p class="mb-0 lead">We’re here to help! Reach out to us for any inquiries, estimates, or service requests.</p>
+         </div>
+      </div>
+   </div>
+</section>
+<!--Pageheader end-->
+<div class="container">
+
+    <ul>
+        {% for job in jobs %}
+        <li>
+            <a href="{{ url_for('show_job_detail', job_slug=job['Title']|create_slug) }}">
+
+                {{ job['Title'] }} - {{ job['location'] }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

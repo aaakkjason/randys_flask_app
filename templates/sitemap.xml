@@ -3,12 +3,16 @@
     {% for route in static_routes %}
     <url>
         <loc>{{ route['loc'] }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     {% endfor %}
 
     {% for route in dynamic_routes %}
     <url>
         <loc>{{ route['loc'] }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     {% endfor %}
 </urlset>

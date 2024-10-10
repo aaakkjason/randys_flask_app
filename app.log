@@ -1,0 +1,56 @@
+2024-10-10 18:11:59,160 - INFO - Flask application has started.
+2024-10-10 18:11:59,200 - WARNING -  * Debugger is active!
+2024-10-10 18:11:59,205 - INFO -  * Debugger PIN: 192-992-056
+2024-10-10 18:13:26,869 - INFO - Flask application has started.
+2024-10-10 18:13:26,899 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 18:13:26,901 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 18:13:26,903 - INFO -  * Restarting with stat
+2024-10-10 18:13:27,850 - INFO - Flask application has started.
+2024-10-10 18:13:27,871 - WARNING -  * Debugger is active!
+2024-10-10 18:13:27,876 - INFO -  * Debugger PIN: 192-992-056
+2024-10-10 18:13:58,601 - WARNING - Attempted access to non-existent page: filenames
+2024-10-10 18:13:58,601 - WARNING - Page not found: http://127.0.0.1:5000/filenames?keyword=truck
+2024-10-10 18:13:58,604 - INFO - 127.0.0.1 - - [10/Oct/2024 18:13:58] "[33mGET /filenames?keyword=truck HTTP/1.1[0m" 404 -
+2024-10-10 18:14:11,945 - WARNING - Attempted access to non-existent page: d
+2024-10-10 18:14:11,946 - WARNING - Page not found: http://127.0.0.1:5000/d
+2024-10-10 18:14:11,947 - INFO - 127.0.0.1 - - [10/Oct/2024 18:14:11] "[33mGET /d HTTP/1.1[0m" 404 -
+2024-10-10 18:19:31,138 - WARNING - No job found for slug: tree-service-in-edison-nj-on-park-gate-drf
+2024-10-10 18:19:31,138 - ERROR - Error displaying job details for slug tree-service-in-edison-nj-on-park-gate-drf: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-10-10 18:19:31,139 - ERROR - Server error at http://127.0.0.1:5000/job/tree-service-in-edison-nj-on-park-gate-drf: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-10-10 18:19:31,147 - INFO - 127.0.0.1 - - [10/Oct/2024 18:19:31] "[35m[1mGET /job/tree-service-in-edison-nj-on-park-gate-drf HTTP/1.1[0m" 500 -
+2024-10-10 18:19:39,358 - WARNING - No job found for slug: tree-service-in-edison-nj-on-park-f
+2024-10-10 18:19:39,358 - ERROR - Error displaying job details for slug tree-service-in-edison-nj-on-park-f: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-10-10 18:19:39,358 - ERROR - Server error at http://127.0.0.1:5000/job/tree-service-in-edison-nj-on-park-f: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-10-10 18:19:39,359 - INFO - 127.0.0.1 - - [10/Oct/2024 18:19:39] "[35m[1mGET /job/tree-service-in-edison-nj-on-park-f HTTP/1.1[0m" 500 -
+2024-10-10 18:19:46,093 - WARNING - Attempted access to non-existent page: reviewsf
+2024-10-10 18:19:46,094 - WARNING - Page not found: http://127.0.0.1:5000/reviewsf
+2024-10-10 18:19:46,113 - INFO - 127.0.0.1 - - [10/Oct/2024 18:19:46] "[33mGET /reviewsf HTTP/1.1[0m" 404 -
+2024-10-10 18:20:23,479 - WARNING - Attempted access to non-existent page: reviewsf
+2024-10-10 18:20:23,480 - WARNING - Page not found: http://127.0.0.1:5000/reviewsf
+2024-10-10 18:20:23,489 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:23] "[33mGET /reviewsf HTTP/1.1[0m" 404 -
+2024-10-10 18:20:30,835 - WARNING - Attempted access to non-existent page: reviewsf
+2024-10-10 18:20:30,835 - WARNING - Page not found: http://127.0.0.1:5000/reviewsf
+2024-10-10 18:20:30,893 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:30] "[35m[1mGET /reviewsf HTTP/1.1[0m" 500 -
+2024-10-10 18:20:30,976 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:30] "GET /reviewsf?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-10-10 18:20:30,982 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:30] "GET /reviewsf?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-10-10 18:20:31,022 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:31] "GET /reviewsf?__debugger__=yes&cmd=resource&f=console.png&s=NXwro749AsSBRLR6TIiW HTTP/1.1" 200 -
+2024-10-10 18:20:31,048 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:31] "GET /reviewsf?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-10-10 18:20:35,638 - WARNING - Attempted access to non-existent page: reviewsf
+2024-10-10 18:20:35,638 - WARNING - Page not found: http://127.0.0.1:5000/reviewsf
+2024-10-10 18:20:35,642 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:35] "[33mGET /reviewsf HTTP/1.1[0m" 404 -
+2024-10-10 18:20:45,225 - WARNING - Attempted access to non-existent page: reviewsf
+2024-10-10 18:20:45,225 - WARNING - Page not found: http://127.0.0.1:5000/reviewsf
+2024-10-10 18:20:45,226 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:45] "[33mGET /reviewsf HTTP/1.1[0m" 404 -
+2024-10-10 18:20:48,817 - WARNING - Attempted access to non-existent page: signin.html
+2024-10-10 18:20:48,818 - WARNING - Page not found: http://127.0.0.1:5000/signin.html
+2024-10-10 18:20:48,819 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:48] "[33mGET /signin.html HTTP/1.1[0m" 404 -
+2024-10-10 18:20:49,436 - WARNING - Attempted access to non-existent page: signup.html
+2024-10-10 18:20:49,436 - WARNING - Page not found: http://127.0.0.1:5000/signup.html
+2024-10-10 18:20:49,437 - INFO - 127.0.0.1 - - [10/Oct/2024 18:20:49] "[33mGET /signup.html HTTP/1.1[0m" 404 -
+2024-10-10 18:21:01,612 - WARNING - Attempted access to non-existent page: signin.html
+2024-10-10 18:21:01,612 - WARNING - Page not found: http://127.0.0.1:5000/signin.html
+2024-10-10 18:21:01,623 - INFO - 127.0.0.1 - - [10/Oct/2024 18:21:01] "[33mGET /signin.html HTTP/1.1[0m" 404 -
+2024-10-10 18:21:20,315 - WARNING - Attempted access to non-existent page: signin.html
+2024-10-10 18:21:20,315 - WARNING - Page not found: http://127.0.0.1:5000/signin.html
+2024-10-10 18:21:20,327 - INFO - 127.0.0.1 - - [10/Oct/2024 18:21:20] "[33mGET /signin.html HTTP/1.1[0m" 404 -
