@@ -1,0 +1,64 @@
+<!-- templates/content/reviews.html -->
+<div class="container mt-5">
+    <h1>Customer Reviews</h1>
+    <div class="reviews-list row">
+        {% for review in reviews %}
+            <div class="col-md-6"> <!-- Use col-md-6 to show 2 reviews per row -->
+                <div class="review-item mb-4 p-4 border rounded">
+                    <div class="d-flex align-items-center">
+                        {% if review['reviewerPhotoUrl'] %}
+                            <img src="{{ review['reviewerPhotoUrl'] }}" alt="{{ review['name'] }}'s photo" class="rounded-circle me-3" width="60">
+                        {% endif %}
+                        <div>
+                            {% if review['name'] %}
+                                <h4>{{ review['name'] }}</h4>
+                            {% endif %}
+                            {% if review['stars'] %}
+                                <p class="mb-1"><strong>Rating:</strong> {{ review['stars'] }} stars</p>
+                            {% endif %}
+                            {% if review['publishedAtDate'] %}
+                                <p class="text-muted">Published on: {{ review['publishedAtDate'] }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if review['text'] %}
+                        <p class="mt-3">{{ review['text'] }}</p>
+                    {% endif %}
+
+                    <!-- Bootstrap Carousel for Review Images -->
+                    {% if review['reviewImageUrls/0'] %}  <!-- Only show if there's at least one image -->
+                    <div id="carousel{{ loop.index }}" class="carousel slide mt-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            {% for i in range(0, 15) %}
+                                {% set imageUrl = review['reviewImageUrls/' + i|string] %}
+                                {% if imageUrl %}
+                                    <div class="carousel-item {% if i == 0 %}active{% endif %}">
+                                        <img src="{{ imageUrl }}" class="d-block w-100" alt="Review image {{ i+1 }}" style="max-height: 400px; object-fit: cover;">
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ loop.index }}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ loop.index }}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    {% endif %}
+
+                    {% if review['reviewUrl'] %}
+                        <a href="{{ review['reviewUrl'] }}" class="btn btn-primary mt-3" target="_blank">Read Full Review</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Clear row after every two reviews -->
+            {% if loop.index is divisibleby 2 %}
+                <div class="w-100"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
