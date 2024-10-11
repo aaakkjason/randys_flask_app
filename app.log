@@ -54,3 +54,47 @@
 2024-10-10 18:21:20,315 - WARNING - Attempted access to non-existent page: signin.html
 2024-10-10 18:21:20,315 - WARNING - Page not found: http://127.0.0.1:5000/signin.html
 2024-10-10 18:21:20,327 - INFO - 127.0.0.1 - - [10/Oct/2024 18:21:20] "[33mGET /signin.html HTTP/1.1[0m" 404 -
+2024-10-10 18:59:27,693 - INFO - Flask application has started.
+2024-10-10 18:59:27,730 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 18:59:27,730 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 18:59:27,733 - INFO -  * Restarting with stat
+2024-10-10 18:59:28,750 - INFO - Flask application has started.
+2024-10-10 18:59:28,771 - WARNING -  * Debugger is active!
+2024-10-10 18:59:28,776 - INFO -  * Debugger PIN: 192-992-056
+2024-10-10 18:59:45,818 - INFO - Home page accessed.
+2024-10-10 18:59:45,842 - INFO - 127.0.0.1 - - [10/Oct/2024 18:59:45] "GET / HTTP/1.1" 200 -
+2024-10-10 18:59:51,714 - WARNING - Attempted access to non-existent page: favicon.ico
+2024-10-10 18:59:51,715 - WARNING - Page not found: http://127.0.0.1:5000/favicon.ico
+2024-10-10 18:59:51,718 - INFO - 127.0.0.1 - - [10/Oct/2024 18:59:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-10 21:00:37,935 - INFO - Flask application has started.
+2024-10-10 21:00:37,984 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 21:00:37,984 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 21:00:37,984 - INFO -  * Restarting with stat
+2024-10-10 21:00:38,990 - INFO - Flask application has started.
+2024-10-10 21:00:39,008 - WARNING -  * Debugger is active!
+2024-10-10 21:00:39,016 - INFO -  * Debugger PIN: 192-992-056
+2024-10-10 21:00:41,492 - INFO - Home page accessed.
+2024-10-10 21:00:41,519 - INFO - 127.0.0.1 - - [10/Oct/2024 21:00:41] "GET / HTTP/1.1" 200 -
+2024-10-10 21:00:51,301 - INFO - Page 'contact' accessed.
+2024-10-10 21:00:51,305 - INFO - 127.0.0.1 - - [10/Oct/2024 21:00:51] "GET /contact HTTP/1.1" 200 -
+2024-10-10 21:00:53,136 - INFO - Jobs page accessed.
+2024-10-10 21:00:53,153 - INFO - 127.0.0.1 - - [10/Oct/2024 21:00:53] "GET /jobs HTTP/1.1" 200 -
+2024-10-10 21:00:53,766 - INFO - Reviews page accessed.
+2024-10-10 21:00:53,788 - INFO - 127.0.0.1 - - [10/Oct/2024 21:00:53] "GET /reviews HTTP/1.1" 200 -
+2024-10-10 21:00:53,900 - WARNING - Attempted access to non-existent page: nan
+2024-10-10 21:00:53,900 - WARNING - Page not found: http://127.0.0.1:5000/nan
+2024-10-10 21:00:53,900 - INFO - 127.0.0.1 - - [10/Oct/2024 21:00:53] "[33mGET /nan HTTP/1.1[0m" 404 -
+2024-10-10 21:00:55,914 - INFO - Displaying details for job: Tree Service in Edison, NJ on Park Gate Dr
+2024-10-10 21:00:55,943 - INFO - 127.0.0.1 - - [10/Oct/2024 21:00:55] "GET /job/tree-service-in-edison-nj-on-park-gate-dr HTTP/1.1" 200 -
+2024-10-10 21:01:22,691 - INFO - Displaying details for job: Tree Service in Edison, NJ on Park Gate Dr
+2024-10-10 21:01:22,697 - INFO - 127.0.0.1 - - [10/Oct/2024 21:01:22] "GET /job/tree-service-in-edison-nj-on-park-gate-dr HTTP/1.1" 200 -
+2024-10-10 21:01:31,515 - WARNING - Page not found: http://127.0.0.1:5000/services/commercial-tree-services
+2024-10-10 21:01:31,516 - INFO - 127.0.0.1 - - [10/Oct/2024 21:01:31] "[33mGET /services/commercial-tree-services HTTP/1.1[0m" 404 -
+2024-10-10 21:01:33,770 - WARNING - Attempted access to non-existent page: signup.html
+2024-10-10 21:01:33,770 - WARNING - Page not found: http://127.0.0.1:5000/signup.html
+2024-10-10 21:01:33,771 - INFO - 127.0.0.1 - - [10/Oct/2024 21:01:33] "[33mGET /signup.html HTTP/1.1[0m" 404 -
+2024-10-10 21:01:34,382 - WARNING - Attempted access to non-existent page: signin.html
+2024-10-10 21:01:34,382 - WARNING - Page not found: http://127.0.0.1:5000/signin.html
+2024-10-10 21:01:34,383 - INFO - 127.0.0.1 - - [10/Oct/2024 21:01:34] "[33mGET /signin.html HTTP/1.1[0m" 404 -
