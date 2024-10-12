@@ -125,3 +125,71 @@
 2024-10-12 00:57:32,689 - INFO - 127.0.0.1 - - [12/Oct/2024 00:57:32] "GET / HTTP/1.1" 200 -
 2024-10-12 00:58:25,047 - INFO - Home page accessed.
 2024-10-12 00:58:25,050 - INFO - 127.0.0.1 - - [12/Oct/2024 00:58:25] "GET / HTTP/1.1" 200 -
+2024-10-12 11:38:33,423 - INFO - Flask application has started.
+2024-10-12 11:38:33,542 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 11:38:33,542 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 11:38:33,552 - INFO -  * Restarting with stat
+2024-10-12 11:38:34,846 - INFO - Flask application has started.
+2024-10-12 11:38:34,959 - WARNING -  * Debugger is active!
+2024-10-12 11:38:34,974 - INFO -  * Debugger PIN: 190-939-034
+2024-10-12 11:38:36,619 - INFO - Home page accessed.
+2024-10-12 11:38:36,754 - INFO - 127.0.0.1 - - [12/Oct/2024 11:38:36] "GET / HTTP/1.1" 200 -
+2024-10-12 11:38:39,057 - INFO - Page 'contact' accessed.
+2024-10-12 11:38:39,082 - INFO - 127.0.0.1 - - [12/Oct/2024 11:38:39] "GET /contact HTTP/1.1" 200 -
+2024-10-12 11:38:39,121 - WARNING - Page not found: http://127.0.0.1:5000/static/images/location/nj-location.jpg
+2024-10-12 11:38:39,141 - INFO - 127.0.0.1 - - [12/Oct/2024 11:38:39] "[33mGET /static/images/location/nj-location.jpg HTTP/1.1[0m" 404 -
+2024-10-12 11:38:39,157 - WARNING - Page not found: http://127.0.0.1:5000/static/images/location/tampa-location.jpg
+2024-10-12 11:38:39,159 - WARNING - Page not found: http://127.0.0.1:5000/static/images/location/denver-location.jpg
+2024-10-12 11:38:39,161 - INFO - 127.0.0.1 - - [12/Oct/2024 11:38:39] "[33mGET /static/images/location/tampa-location.jpg HTTP/1.1[0m" 404 -
+2024-10-12 11:38:39,162 - WARNING - Page not found: http://127.0.0.1:5000/static/images/location/miami-location.jpg
+2024-10-12 11:38:39,165 - INFO - 127.0.0.1 - - [12/Oct/2024 11:38:39] "[33mGET /static/images/location/denver-location.jpg HTTP/1.1[0m" 404 -
+2024-10-12 11:38:39,167 - INFO - 127.0.0.1 - - [12/Oct/2024 11:38:39] "[33mGET /static/images/location/miami-location.jpg HTTP/1.1[0m" 404 -
+2024-10-12 11:50:07,662 - INFO - Flask application has started.
+2024-10-12 11:50:07,696 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 11:50:07,697 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 11:50:07,699 - INFO -  * Restarting with stat
+2024-10-12 11:50:08,628 - INFO - Flask application has started.
+2024-10-12 11:50:08,654 - WARNING -  * Debugger is active!
+2024-10-12 11:50:08,661 - INFO -  * Debugger PIN: 190-939-034
+2024-10-12 11:50:28,927 - WARNING - Attempted access to non-existent page: signup.html
+2024-10-12 11:50:28,928 - WARNING - Page not found: http://127.0.0.1:5000/signup.html
+2024-10-12 11:50:28,962 - INFO - 127.0.0.1 - - [12/Oct/2024 11:50:28] "[33mGET /signup.html HTTP/1.1[0m" 404 -
+2024-10-12 11:50:31,597 - WARNING - Page not found: http://127.0.0.1:5000/about/company-profile.html
+2024-10-12 11:50:31,598 - INFO - 127.0.0.1 - - [12/Oct/2024 11:50:31] "[33mGET /about/company-profile.html HTTP/1.1[0m" 404 -
+2024-10-12 11:56:37,551 - INFO - Home page accessed.
+2024-10-12 11:56:37,712 - INFO - 127.0.0.1 - - [12/Oct/2024 11:56:37] "GET / HTTP/1.1" 200 -
+2024-10-12 11:58:28,868 - INFO - Flask application has started.
+2024-10-12 11:58:28,904 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 11:58:28,905 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 11:58:28,908 - INFO -  * Restarting with stat
+2024-10-12 11:58:29,681 - INFO - Flask application has started.
+2024-10-12 11:58:29,701 - WARNING -  * Debugger is active!
+2024-10-12 11:58:29,707 - INFO -  * Debugger PIN: 190-939-034
+2024-10-12 13:58:53,839 - INFO - Flask application has started.
+2024-10-12 13:58:54,006 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 13:58:54,007 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 13:58:54,019 - INFO -  * Restarting with stat
+2024-10-12 13:58:55,655 - INFO - Flask application has started.
+2024-10-12 13:58:55,699 - WARNING -  * Debugger is active!
+2024-10-12 13:58:55,713 - INFO -  * Debugger PIN: 190-939-034
+2024-10-12 13:58:57,230 - INFO - Home page accessed.
+2024-10-12 13:58:57,414 - INFO - 127.0.0.1 - - [12/Oct/2024 13:58:57] "GET / HTTP/1.1" 200 -
+2024-10-12 13:58:59,233 - INFO - Page 'contact' accessed.
+2024-10-12 13:58:59,255 - INFO - 127.0.0.1 - - [12/Oct/2024 13:58:59] "GET /contact HTTP/1.1" 200 -
+2024-10-12 13:59:01,183 - INFO - Jobs page accessed.
+2024-10-12 13:59:01,221 - INFO - 127.0.0.1 - - [12/Oct/2024 13:59:01] "GET /jobs HTTP/1.1" 200 -
+2024-10-12 13:59:02,767 - INFO - Displaying details for job: Tree Service in Ringoes,NJ on Larsen Rd
+2024-10-12 13:59:02,786 - INFO - 127.0.0.1 - - [12/Oct/2024 13:59:02] "GET /job/tree-service-in-ringoesnj-on-larsen-rd HTTP/1.1" 200 -
+2024-10-12 13:59:08,910 - WARNING - Attempted access to non-existent page: favicon.ico
+2024-10-12 13:59:08,911 - WARNING - Page not found: http://127.0.0.1:5000/favicon.ico
+2024-10-12 13:59:08,926 - INFO - 127.0.0.1 - - [12/Oct/2024 13:59:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-12 15:23:19,592 - INFO - Page 'contact' accessed.
+2024-10-12 15:23:19,594 - INFO - 127.0.0.1 - - [12/Oct/2024 15:23:19] "GET /contact HTTP/1.1" 200 -
+2024-10-12 15:23:42,296 - INFO - Page 'contact' accessed.
+2024-10-12 15:23:42,298 - INFO - 127.0.0.1 - - [12/Oct/2024 15:23:42] "GET /contact HTTP/1.1" 200 -
+2024-10-12 15:24:29,602 - INFO - Page 'contact' accessed.
+2024-10-12 15:24:29,603 - INFO - 127.0.0.1 - - [12/Oct/2024 15:24:29] "GET /contact HTTP/1.1" 200 -
