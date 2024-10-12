@@ -98,3 +98,29 @@
 2024-10-10 21:01:34,382 - WARNING - Attempted access to non-existent page: signin.html
 2024-10-10 21:01:34,382 - WARNING - Page not found: http://127.0.0.1:5000/signin.html
 2024-10-10 21:01:34,383 - INFO - 127.0.0.1 - - [10/Oct/2024 21:01:34] "[33mGET /signin.html HTTP/1.1[0m" 404 -
+2024-10-12 00:46:47,409 - INFO - Flask application has started.
+2024-10-12 00:46:47,564 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 00:46:47,565 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 00:46:47,580 - INFO -  * Restarting with stat
+2024-10-12 00:46:48,581 - INFO - Flask application has started.
+2024-10-12 00:46:48,605 - WARNING -  * Debugger is active!
+2024-10-12 00:46:48,613 - INFO -  * Debugger PIN: 190-939-034
+2024-10-12 00:46:56,169 - INFO - Home page accessed.
+2024-10-12 00:46:56,260 - INFO - 127.0.0.1 - - [12/Oct/2024 00:46:56] "GET / HTTP/1.1" 200 -
+2024-10-12 00:53:28,433 - INFO - Home page accessed.
+2024-10-12 00:53:28,436 - INFO - 127.0.0.1 - - [12/Oct/2024 00:53:28] "GET / HTTP/1.1" 200 -
+2024-10-12 00:53:34,618 - WARNING - Attempted access to non-existent page: favicon.ico
+2024-10-12 00:53:34,619 - WARNING - Page not found: http://127.0.0.1:5000/favicon.ico
+2024-10-12 00:53:34,628 - INFO - 127.0.0.1 - - [12/Oct/2024 00:53:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-12 00:54:03,643 - INFO - Home page accessed.
+2024-10-12 00:54:03,647 - INFO - 127.0.0.1 - - [12/Oct/2024 00:54:03] "GET / HTTP/1.1" 200 -
+2024-10-12 00:54:09,757 - INFO - Home page accessed.
+2024-10-12 00:54:09,760 - INFO - 127.0.0.1 - - [12/Oct/2024 00:54:09] "GET / HTTP/1.1" 200 -
+2024-10-12 00:54:51,464 - INFO - Home page accessed.
+2024-10-12 00:54:51,467 - INFO - 127.0.0.1 - - [12/Oct/2024 00:54:51] "GET / HTTP/1.1" 200 -
+2024-10-12 00:57:28,272 - INFO - Home page accessed.
+2024-10-12 00:57:28,279 - INFO - 127.0.0.1 - - [12/Oct/2024 00:57:28] "GET / HTTP/1.1" 200 -
+2024-10-12 00:57:32,684 - INFO - Home page accessed.
+2024-10-12 00:57:32,689 - INFO - 127.0.0.1 - - [12/Oct/2024 00:57:32] "GET / HTTP/1.1" 200 -
+2024-10-12 00:58:25,047 - INFO - Home page accessed.
