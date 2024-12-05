@@ -1,128 +1,145 @@
-<header>
-   
-  
+<header class="sticky-top">
 
-
-
-    <nav class="navbar navbar-expand-lg navbar-light w-100">
-       <div class="container px-3">
-          <a class="navbar-brand" href="/"><img src="/static/images/logo/randy.png" width="250px" alt /></a>
-          <button class="navbar-toggler offcanvas-nav-btn" type="button">
-             <i class="bi bi-list"></i>
-          </button>
-          <div class="offcanvas offcanvas-start offcanvas-nav" style="width: 20rem">
-             <div class="offcanvas-header">
-                <a href="/" class="text-inverse"><img src="/static/images/logo/randy.png" width="250px" alt /></a>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-             </div>
-             <div class="offcanvas-body pt-0 align-items-center">
-               <ul class="navbar-nav mx-auto align-items-lg-center">
-                  
-                  
-         
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/about/company-profile.html">Company Profiles</a></li>
-                        <li><a class="dropdown-item" href="/about/safety.html">Safety Standards</a></li>
-                        <li><a class="dropdown-item" href="/about/team.html">Our Team</a></li>
-                        <li><a class="dropdown-item" href="/about/certifications.html">Certifications</a></li>
-                        <li><a class="dropdown-item" href="/about/testimonials.html">Customer Testimonials</a></li>
-                        <li><a class="dropdown-item" href="/about/community.html">Community Involvement</a></li>
-                        <li><a class="dropdown-item" href="/about/environmental-commitment.html">Environmental Commitment</a></li>
-                        <li><a class="dropdown-item" href="/about/careers.html">Careers</a></li>
-                        <li><a class="dropdown-item" href="/about/contact.html">Contact Us</a></li>
-                        <li class="dropdown dropdown-submenu dropend">
-                            <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Tree Services</a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-header">Our Services</li>
-                                <li><a class="dropdown-item" href="/services/tree-trimming.html">Tree Trimming</a></li>
-                                <li><a class="dropdown-item" href="/services/tree-removal.html">Tree Removal</a></li>
-                                <li><a class="dropdown-item" href="/services/stump-grinding.html">Stump Grinding</a></li>
-                                <li><a class="dropdown-item" href="/services/emergency-services.html">Emergency Services</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li class="dropdown-header">Specialty Services</li>
-                                <li><a class="dropdown-item" href="/services/plant-healthcare.html">Plant Healthcare</a></li>
-                                <li><a class="dropdown-item" href="/services/cabling-bracing.html">Cabling & Bracing</a></li>
-                                <li><a class="dropdown-item" href="/services/landscape-management.html">Landscape Management</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown dropdown-submenu dropend">
-                            <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Resources</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/resources/tree-care-guide.html">Tree Care Guide</a></li>
-                                <li><a class="dropdown-item" href="/resources/frequently-asked-questions.html">Frequently Asked Questions</a></li>
-                                <li><a class="dropdown-item" href="/resources/blog.html">Blog</a></li>
-                                <li><a class="dropdown-item" href="/resources/changelog.html">Changelog</a></li>
-                            </ul>
-                        </li>
+    <!-- Top Bar -->
+    <div class="top-bar bg-light py-2 d-none d-md-flex">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="top-bar-center d-none d-md-flex align-items-center">
+                <!-- Dropdown Links in Top Bar -->
+                <div class="dropdown me-3">
+                    <a href="/tree-services" class="text-dark bold-links dropdown-toggle" id="treeServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tree Services</a>
+                    <ul class="dropdown-menu" aria-labelledby="treeServicesDropdown">
+                        <li><a class="dropdown-item" href="/tree-services">Tree Services</a></li>
+                        <li><a class="dropdown-item" href="/tree-services/emergency-tree-service">Emergency Tree Service</a></li>
+                        <li><a class="dropdown-item" href="/tree-services/tree-removal">Tree Removal</a></li>
+                        <li><a class="dropdown-item" href="/tree-services/tree-shrub-planting">Tree &amp; Shrub Planting</a></li>
                     </ul>
-                </li>
-                
-                 
-                  
-
-                  
-                
-
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                    <ul class="dropdown-menu">
-                        {% for parent, children in parent_services.items() %}
-                            {% if children %}
-                                <!-- If the parent service has children, display as a dropdown -->
-                                <li class="dropdown dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-toggle" href="/services/{{ parent | lower | replace(' ', '-') }}">{{ parent }}</a>
-                                    <ul class="dropdown-menu">
-                                        {% for child in children %}
-                                            <li><a class="dropdown-item" href="/services/{{ parent | lower | replace(' ', '-') }}/{{ child.slug }}">{{ child.name }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                            {% else %}
-                                <!-- If the parent service has no children, display as a regular link -->
-                                <li><a class="dropdown-item" href="/services/{{ parent | lower | replace(' ', '-') }}">{{ parent }}</a></li>
-                            {% endif %}
-                        {% endfor %}
+                </div>
+                <a href="/contact" class="text-dark me-3 bold-links">Contact</a>
+                <div class="dropdown me-3">
+                    <a href="/landscaping-services" class="text-dark bold-links dropdown-toggle" id="landscapingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Landscaping</a>
+                    <ul class="dropdown-menu" aria-labelledby="landscapingDropdown">
+                        <li><a class="dropdown-item" href="/landscaping-services">Landscaping Services</a></li>
+                        <li><a class="dropdown-item" href="/landscaping-services/landscape-design">Landscape Design</a></li>
+                        <li><a class="dropdown-item" href="/landscaping-services/weekly-landscape-maintenance">Weekly Maintenance</a></li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/reviews">Reviews</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/jobs">Jobs</a>
-                </li>
+                </div>
                 
-
-
-               
-              
-                 <li class="nav-item">
-                  <a class="nav-link" href="/contact">Contact</a>
-              </li>
-
-              </ul>
-          
-              <div class="mt-3 mt-lg-0 d-flex align-items-center">
-                <a href="./signin.html" class="btn btn-light me-2 btn-lg">732-648-9169</a>
-
-
-
-                
-                <a href="./signup.html" class="btn btn-primary me-2 btn-lg">Free Consultation</a>
-             </div>
-      
-              
-             </div>
-          </div>
-       </div>
-    </nav>
-
-
-
-
+                <div class="dropdown me-3">
+                    <a href="/hardscaping-services" class="text-dark bold-links dropdown-toggle" id="hardscapingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hardscaping</a>
+                    <ul class="dropdown-menu" aria-labelledby="hardscapingDropdown">
+                        <li><a class="dropdown-item" href="/hardscaping-services">Hardscaping Services</a></li>
+                        <li><a class="dropdown-item" href="/hardscaping-services/design-build-service">Design Build Service</a></li>
+                        <li><a class="dropdown-item" href="/hardscaping-services/patios-walkways-installation">Patios &amp; Walkways</a></li>
+                    </ul>
+                </div>
+            </div>
     
+            <div class="top-bar-right">
+                <a href="tel:+1234567890" class="text-dark me-3" style="font-size: 1.4rem; font-weight: bold;">
+                    <i class="bi bi-telephone"></i> (732) 648-9169
+                </a>
+            </div>
+    
+            <div class="mt-3 mt-lg-0 d-flex align-items-center">
+                <a href="./signup.html" class="btn btn-primary me-2 btn-md">Free Consultation</a>
+                <a href="./signup.html" class="btn btn-lt me-2 btn-md">Client Login</a>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="container px-3">
 
+            <a class="navbar-brand" href="/"><img src="/static/images/logo/randy.png" width="245px" alt /></a>
+                     <!-- Phone Icon Link Button (Visible only on mobile) -->
+                     <a href="tel:+1234567890" class="d-lg-none d-inline me-2" style="font-size: 1.5rem;">
+                        <i class="bi bi-telephone-fill"></i>
+                    </a>
 
- </header>
+            <button class="navbar-toggler offcanvas-nav-btn" type="button">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-start offcanvas-nav" style="width: 20rem">
+                <!-- Top Bar in Offcanvas (Only visible on mobile) -->
+                <div class="offcanvas-header">
+                    <a href="/" class="text-inverse"><img src="/static/images/logo/randy.png" width="150px" alt /></a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body pt-0 align-items-center">
+                    <ul class="navbar-nav mx-auto align-items-lg-center">
+                        <!-- Existing Dropdown Menu Code -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/tree-services" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/tree-services">Tree Services</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/emergency-tree-service">Emergency Tree Service</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/tree-removal">Tree Removal</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/tree-shrub-planting">Tree &amp; Shrub Planting</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/tree-trimming">Tree Trimming</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/stump-grinding">Stump Grinding</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/tree-pruning">Tree Pruning</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/cable-bracing">Cable &amp; Bracing</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/tree-services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tree Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/tree-services">Tree Services</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/emergency-tree-service">Emergency Tree Service</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/tree-removal">Tree Removal</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/tree-shrub-planting">Tree &amp; Shrub Planting</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/tree-trimming">Tree Trimming</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/stump-grinding">Stump Grinding</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/tree-pruning">Tree Pruning</a></li>
+                                <li><a class="dropdown-item" href="/tree-services/cable-bracing">Cable &amp; Bracing</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/landscaping-services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Landscaping</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/landscaping-services">Landscaping Services</a></li>
+                                <li><a class="dropdown-item" href="/landscaping-services/landscape-design">Landscape Design</a></li>
+                                <li><a class="dropdown-item" href="/landscaping-services/weekly-landscape-maintenance">Weekly Maintenance</a></li>
+                                <li><a class="dropdown-item" href="/landscaping-services/yard-clean-up">Yard Clean Up</a></li>
+                                <li><a class="dropdown-item" href="/landscaping-services/grading-leveling">Grading &amp; Leveling</a></li>
+                                <li><a class="dropdown-item" href="/landscaping-services/mulch-installation">Mulch Installation</a></li>
+                                <li><a class="dropdown-item" href="/landscaping-services/sod-installation">Sod Installation</a></li>
+                                <li><a class="dropdown-item" href="/landscaping-services/yard-downspout-drainage">Yard Drainage</a></li>
+                                <li><a class="dropdown-item" href="/landscaping-services/sprinkler-system-installation">Sprinkler Installation</a></li>
+                                <li><a class="dropdown-item" href="/outdoor-lighting-installation">Outdoor Lighting</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/hardscaping-services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hardscaping</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/hardscaping-services">Hardscaping Services</a></li>
+                                <li><a class="dropdown-item" href="/hardscaping-services/design-build-service">Design Build Service</a></li>
+                                <li><a class="dropdown-item" href="/hardscaping-services/patios-walkways-installation">Patios &amp; Walkways</a></li>
+                                <li><a class="dropdown-item" href="/hardscaping-services/retaining-wall-installation">Retaining Wall Installation</a></li>
+                                <li><a class="dropdown-item" href="/hardscaping-services/hardscape-steps-installation">Steps Installation</a></li>
+                                <li><a class="dropdown-item" href="/hardscaping-services/fence-installation">Fence Installation</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/commercial-tree-services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Commercial</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/commercial-tree-services">Commercial Tree Services</a></li>
+                                <li><a class="dropdown-item" href="/commercial-tree-services/commercial-tree-removal">Commercial Tree Removal</a></li>
+                                <li><a class="dropdown-item" href="/commercial-tree-services/commercial-tree-pruning">Commercial Tree Pruning</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, abort, url_for, Response, send_from_directory
 from datetime import datetime
-from collections import defaultdict
 import pandas as pd
 import re
 import logging
@@ -53,7 +52,6 @@ for _, service in servicecats_df.iterrows():
             "county_slug": create_slug(location['county_name']),
             "municipality": location['municipality'],
             "area_codes": location['area_codes']
-            
         })
 
 # Create parent-child service structure
@@ -99,9 +97,10 @@ def add_cache_control_headers(response):
         response.headers['Cache-Control'] = 'public, max-age=3600'  # Cache for 1 hour
     return response
 
+
 #################            CUSTOM JINJA SHORTCODE           #################################
 
-# Create a custom Jinja2 function for getting a random image from the API
+# Create a custom Jinja2 shortcode for getting a random image from the API
 def get_random_image(keyword):
     try:
         # API call to your service running on port 8000
@@ -124,9 +123,8 @@ def get_random_image(keyword):
         logging.error(f"Error fetching image from API: {e}")
         return "default-image.jpg"
 
-# Register the get_random_image function as a Jinja2 global function
+# Register the get_random_image function as a Jinja2 filter
 app.jinja_env.globals.update(random_image=get_random_image)
-
 
 
 #################            ROUTES           #################################
@@ -138,7 +136,7 @@ def home():
 
 @app.route("/<page>")
 def render_page(page):
-    allowed_pages = ["about", "services", "service-area", "permits", "contact", "our-work", "estimate", "login"]
+    allowed_pages = ["about", "services", "service-area", "permits", "contact", "our-work", "estimate"]
     if page in allowed_pages:
         logging.info(f"Page '{page}' accessed.")
         return render_template("main.html", content_template=f"content/{page}.html")
@@ -204,13 +202,6 @@ def submit_contact():
     return render_template("main.html", content_template="content/submit_contact.html", 
                            first_name=first_name, last_name=last_name, email=email, 
                            phone=phone, message=message)
-
-@app.route("/locations-map")
-def locations_map():
-    # Convert the DataFrame to a list of dictionaries to pass to the template
-    locations = locationcats_df.to_dict(orient='records')
-    logging.info("Locations map page accessed.")
-    return render_template("content/locations_map.html", locations=locations)
 
 
 #################            SITEMAP           #################################

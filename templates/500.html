@@ -1,1 +1,20 @@
-Internal Sever
+{% extends "base.html" %}
+
+{% block title %}
+    Page Not Found - 404
+{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-1">Sorry About That</h1>
+            <h2 class="mt-4">Internal Server Error</h2>
+            <p class="lead mt-3">
+                Try Again
+            </p>
+            <a href="{{ url_for('home') }}" class="btn btn-primary mt-4">Go Back to Homepage</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

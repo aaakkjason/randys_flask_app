@@ -1,22 +1,4 @@
 ﻿name,short_name,cat,cat2,parent_main,parent,desc
-Commercial Tree Removal,Tree Removal,tree,commercial,no,Commercial Tree Services,Safe and efficient removal of trees for commercial properties.
-Commercial Tree Pruning,Tree Pruning,tree,commercial,no,Commercial Tree Services,Professional pruning to maintain the health and aesthetics of trees on commercial sites.
-Commercial Tree Services,Tree Service,tree,commercial,yes,Commercial Tree Services,Comprehensive tree care solutions tailored for commercial clients.
-Fence Installation,Fences,hardscape,installation,no,Hardscaping Services,Expert installation of various types of fences for security and privacy.
-Design Build Service,Design Build,hardscape,design,no,Hardscaping Services,Integrated design and construction services for custom landscaping projects.
-Patios & Walkways Installation,Patios & Walkways,hardscape,installation,no,Hardscaping Services,Design and installation of custom patios and walkways to enhance outdoor spaces.
-Retaining Wall Installation,Retaining Walls,hardscape,installation,no,Hardscaping Services,Construction of retaining walls for landscape support and visual appeal.
-Hardscape Steps Installation,Steps,hardscape,installation,no,Hardscaping Services,Installation of hardscape steps to improve functionality and aesthetics.
-Hardscaping Services,Hardscape,hardscape,installation,yes,Hardscaping Services,Full range of hardscape design and installation services for outdoor environments.
-Landscape Design,Design,landscaping,design,no,Landscaping Services,Professional planning and design services to create beautiful landscapes.
-Weekly Landscape Maintenance,Weekly Maintenance,landscaping,maintenance,no,Landscaping Services,Regular upkeep services to keep your landscape healthy and attractive.
-Yard Clean Up,Clean Up,landscaping,maintenance,no,Landscaping Services,Comprehensive cleaning services to refresh and rejuvenate your yard.
-Grading & Leveling,Grading,landscaping,maintenance,no,Landscaping Services,Earthmoving services to prepare land for construction or landscaping by ensuring proper drainage and level surfaces.
-Mulch Installation,Mulch,landscaping,installation,no,Landscaping Services,Application of mulch to enhance soil health and improve plant growth.
-Sod Installation,Sod,landscaping,installation,no,Landscaping Services,"Professional laying of sod to establish instant, lush lawns."
-Yard & Downspout Drainage,Drainage,landscaping,installation,no,Landscaping Services,Solutions to manage yard water runoff and prevent drainage issues using downspouts and drainage systems.
-Sprinkler System Installation,Sprinklers,landscaping,installation,no,Landscaping Services,Installation of automated sprinkler systems for efficient irrigation.
-Landscaping Services,Landscaping,landscaping,landscaping,yes,Landscaping Services,"Comprehensive services including design, installation, and maintenance of outdoor spaces."
 Tree Services,Tree Services,tree,maintenance,yes,Tree Services,"Full spectrum of tree care services, including trimming, removal, and health assessments."
 Emergency Tree Service,Emergency Service,tree,emergency,no,Tree Services,Rapid response services for tree-related emergencies like storm damage or fallen trees.
 Tree Removal,Removal,tree,maintenance,no,Tree Services,Safe removal of unwanted or hazardous trees from your property.
@@ -25,5 +7,22 @@ Tree Trimming,Trimming,tree,maintenance,no,Tree Services,Pruning and trimming se
 Stump Grinding,Stump Grinding,tree,maintenance,no,Tree Services,Removal of tree stumps below ground level to eliminate hazards and allow for new planting.
 Tree Pruning,Pruning,tree,maintenance,no,Tree Services,Selective removal of branches to improve tree structure and promote healthy growth.
 Cable & Bracing,Cable & Bracing,tree,maintenance,no,Tree Services,Installation of support systems to stabilize weakened trees and prevent limb failure.
+Landscaping Services,Landscaping,landscaping,landscaping,yes,Landscaping Services,"Comprehensive services including design, installation, and maintenance of outdoor spaces."
+Landscape Design,Design,landscaping,design,no,Landscaping Services,Professional planning and design services to create beautiful landscapes.
+Weekly Landscape Maintenance,Weekly Maintenance,landscaping,maintenance,no,Landscaping Services,Regular upkeep services to keep your landscape healthy and attractive.
+Yard Clean Up,Clean Up,landscaping,maintenance,no,Landscaping Services,Comprehensive cleaning services to refresh and rejuvenate your yard.
+Grading & Leveling,Grading,landscaping,maintenance,no,Landscaping Services,Earthmoving services to prepare land for construction or landscaping by ensuring proper drainage and level surfaces.
+Mulch Installation,Mulch,landscaping,installation,no,Landscaping Services,Application of mulch to enhance soil health and improve plant growth.
+Sod Installation,Sod,landscaping,installation,no,Landscaping Services,"Professional laying of sod to establish instant, lush lawns."
+Yard & Downspout Drainage,Drainage,landscaping,installation,no,Landscaping Services,Solutions to manage yard water runoff and prevent drainage issues using downspouts and drainage systems.
+Sprinkler System Installation,Sprinklers,landscaping,installation,no,Landscaping Services,Installation of automated sprinkler systems for efficient irrigation.
+Hardscaping Services,Hardscape,hardscape,installation,yes,Hardscaping Services,Full range of hardscape design and installation services for outdoor environments.
+Fence Installation,Fences,hardscape,installation,no,Hardscaping Services,Expert installation of various types of fences for security and privacy.
+Design Build Service,Design Build,hardscape,design,no,Hardscaping Services,Integrated design and construction services for custom landscaping projects.
+Patios & Walkways Installation,Patios & Walkways,hardscape,installation,no,Hardscaping Services,Design and installation of custom patios and walkways to enhance outdoor spaces.
+Retaining Wall Installation,Retaining Walls,hardscape,installation,no,Hardscaping Services,Construction of retaining walls for landscape support and visual appeal.
+Hardscape Steps Installation,Steps,hardscape,installation,no,Hardscaping Services,Installation of hardscape steps to improve functionality and aesthetics.
+Commercial Tree Services,Tree Service,tree,commercial,yes,Commercial Tree Services,Comprehensive tree care solutions tailored for commercial clients.
+Commercial Tree Removal,Tree Removal,tree,commercial,no,Commercial Tree Services,Safe and efficient removal of trees for commercial properties.
+Commercial Tree Pruning,Tree Pruning,tree,commercial,no,Commercial Tree Services,Professional pruning to maintain the health and aesthetics of trees on commercial sites.
 Outdoor Lighting Installation,Outdoor Lighting,lighting,installation,yes,Outdoor Lighting,Installation of lighting solutions to enhance the beauty and security of your outdoor spaces during nighttime.
- 

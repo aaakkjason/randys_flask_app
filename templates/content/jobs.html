@@ -11,13 +11,14 @@
    </div>
 </section>
 <!--Pageheader end-->
+
 <div class="container">
 
     <ul>
         {% for job in jobs %}
         <li>
             <a href="{{ url_for('show_job_detail', job_slug=job['Title']|create_slug) }}">
-
+                <img src="{{ job['image_url'] }}" alt="{{ job['Title'] }}" class="img-thumbnail" style="width: 100px; height: auto; margin-right: 10px;">
                 {{ job['Title'] }} - {{ job['location'] }}
             </a>
         </li>

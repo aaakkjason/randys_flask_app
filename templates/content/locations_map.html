@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations Map</title>
+    <style>
+        #map {
+            height: 100vh;
+            width: 70%;
+            float: left;
+        }
+
+        #address-list {
+            height: 100vh;
+            width: 30%;
+            float: right;
+            overflow-y: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .address-item {
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .address-item:hover {
+            background-color: #e0e0e0;
+        }
+
+        .back-to-all {
+            background-color: #15a33f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .back-to-all:hover {
+            background-color: #128c35;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- SEO-friendly address list in HTML -->
+    <div id="address-list">
+        <h3>Address List</h3>
+        <div class="back-to-all" onclick="resetMap()">View All Locations</div>
+        
+        {% for location in locations %}
+        <div class="address-item" data-index="{{ loop.index0 }}" onclick="moveToLocation({{ loop.index0 }})">
+            <strong>{{ location['municipality'] }}</strong>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZH5mc0JvqC-7HDZyvImc_9mXDzF93aaY"></script>
+
+    <script>
+        // Map styles and initialization
+        var mapStyle = [
+            { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#c0e8c6" }] },
+            { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#a2d5d1" }] },
+            { "featureType": "road", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }] },
+            { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "off" }] },
+            { "featureType": "transit", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] },
+            { "featureType": "administrative", "elementType": "labels", "stylers": [{ "visibility": "on" }] }
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: { lat: 27.950575, lng: -82.457178 },
+            styles: mapStyle
+        });
+
+        var locations = [
+            {% for location in locations %}
+            { name: "{{ location['location_name'] }}, {{ location['county_name'] }}", coords: { lat: {{ location['lat'] }}, lng: {{ location['lng'] }} } },
+            {% endfor %}
+        ];
+
+        var markers = [];
+        var infoWindow = new google.maps.InfoWindow();
+
+        locations.forEach(function(location, index) {
+            var marker = new google.maps.Marker({
+                position: location.coords,
+                map: map,
+                title: location.name
+            });
+            markers.push(marker);
+
+            // Click listener for each marker to display InfoWindow
+            marker.addListener('click', function() {
+                var content = `
+                    <strong>${location.name}</strong>
+                    <div class="location-description">
+                        <p>Latitude: ${location.coords.lat}</p>
+                        <p>Longitude: ${location.coords.lng}</p>
+                    </div>
+                `;
+                infoWindow.setContent(content);
+                infoWindow.open(map, marker);
+            });
+        });
+
+        // Fit map to show all markers
+        function fitBoundsToMarkers() {
+            var bounds = new google.maps.LatLngBounds();
+            markers.forEach(function(marker) {
+                bounds.extend(marker.getPosition());
+            });
+            map.fitBounds(bounds);
+        }
+        fitBoundsToMarkers(); // Show all markers on initial load
+
+        // Move to a specific location and open InfoWindow
+        function moveToLocation(index) {
+            var marker = markers[index];
+            map.setCenter(marker.getPosition());
+            map.setZoom(12);
+            google.maps.event.trigger(marker, 'click'); // Trigger click event to open InfoWindow
+        }
+
+        // Reset map to fit all markers
+        function resetMap() {
+            fitBoundsToMarkers();
+        }
+    </script>
+</body>
+</html>
